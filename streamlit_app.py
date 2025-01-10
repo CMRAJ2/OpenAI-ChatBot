@@ -49,6 +49,6 @@ else:
             # Display the response and store it in session state.
             with st.chat_message("assistant"):
                 st.markdown(result)
-            st.session_state.messages.append({"role": "assistant", "content": result})
+            st.session_state.messages.append({"role": "assistant", "content": result["response"]})
         except Exception as e:
             st.error(f"An error occurred: {e}")
