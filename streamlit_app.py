@@ -19,8 +19,7 @@ else:
     # Configure Gemini client.
     genai.configure(api_key=gemini_api_key)
     model = genai.GenerativeModel(
-        "gemini-1.5-flash", 
-        generation_config={"response_mime_type": "application/json"}
+        "gemini-1.5-flash"
     )
 
     # Create a session state variable to store the chat messages. This ensures that the
