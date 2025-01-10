@@ -2,16 +2,8 @@ import streamlit as st
 import google.generativeai as genai
 
 # Show title and description.
-st.title("💬 Chatbot")
-st.write(
-    "This is a simple chatbot that uses Google's Gemini model to generate responses. "
-    "To use this app, you need to provide a Gemini API key, which you can get [here](https://makersuite.google.com/). "
-    "You can also learn how to build this app step by step by [following our tutorial](https://docs.streamlit.io/develop/tutorials/llms/build-conversational-apps)."
-)
+st.title("Gemini Chatbot")
 
-# Ask user for their Gemini API key via `st.text_input`.
-# Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
-# via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
 gemini_api_key = st.text_input("Gemini API Key", type="password")
 if not gemini_api_key:
     st.info("Please add your Gemini API key to continue.", icon="🗝️")
