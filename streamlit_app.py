@@ -45,10 +45,11 @@ else:
         try:
             response = model.generate_content(prompt)
             result = response.text
+            print(result)
 
             # Display the response and store it in session state.
             with st.chat_message("assistant"):
                 st.markdown(result)
-            st.session_state.messages.append({"role": "assistant", "content": result["response"]})
+            st.session_state.messages.append({"role": "assistant", "content": result})
         except Exception as e:
             st.error(f"An error occurred: {e}")
